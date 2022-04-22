@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using Newtonsoft.Json.Converters;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,6 +19,7 @@ namespace BooksDeserialisation
         public string title { get; set; }
 
         [XmlElement(ElementName = "genre")]
+        [JsonConverter(typeof(StringEnumConverter))]
         public GenreType genre { get; set; }
         [XmlElement(ElementName = "publisher")]
         public string publisher { get; set; }

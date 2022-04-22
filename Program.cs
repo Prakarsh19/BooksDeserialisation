@@ -28,14 +28,12 @@ namespace BooksDeserialisation
                     for(int i =0; i<obj.books.Count;i++ )
                     {
                         /*Console.WriteLine(obj.books[i].genre);*/
-                        Console.WriteLine(obj.books[i].author);
-                        Console.WriteLine(obj.books[i].title);
-                        Console.WriteLine(obj.books[i].genre);
-                        Console.WriteLine(obj.books[i].publisher);
-                        Console.WriteLine(obj.books[i].publish_date);
-                        Console.WriteLine(obj.books[i].description);
-                        Console.WriteLine(obj.books[i].registration_date);
-
+                        Console.Write("Book ID : "+obj.books[i].id+" "+"Book Title: " +obj.books[i].title + " " +"Book Author "+ obj.books[i].author
+                            +" "+"Genre: "+ obj.books[i].genre+" "+"Publisher: "+ obj.books[i].publisher+" "+"Publish Data: "+ obj.books[i].publish_date);
+                        
+                        Console.WriteLine();
+                       
+                        
 
                     }
 
