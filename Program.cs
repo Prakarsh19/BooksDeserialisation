@@ -24,18 +24,26 @@ namespace BooksDeserialisation
                 {
                     XmlSerializer serializer = new XmlSerializer(typeof(Catalog));
                     obj = (Catalog)serializer.Deserialize(reader);
-                    
-                    for(int i =0; i<obj.books.Count;i++ )
+                    var sb = new System.Text.StringBuilder();
+                    for (int i =0; i<obj.books.Count;i++ )
                     {
+                        sb.Append("Book ID : " + obj.books[i].id);
+                        sb.Append("Book Title: " + obj.books[i].title);
+                        sb.Append("Book Author: " + obj.books[i].author);
+                        sb.Append("Genre: " + obj.books[i].genre);
+                        sb.Append("Publisher: "+obj.books[i].publisher);
+                        sb.AppendLine("Publish Date: " + obj.books[i].publish_date);
                         /*Console.WriteLine(obj.books[i].genre);*/
-                        Console.Write("Book ID : "+obj.books[i].id+" "+"Book Title: " +obj.books[i].title + " " +"Book Author "+ obj.books[i].author
-                            +" "+"Genre: "+ obj.books[i].genre+" "+"Publisher: "+ obj.books[i].publisher+" "+"Publish Data: "+ obj.books[i].publish_date);
-                        
-                        Console.WriteLine();
-                       
-                        
+                        /*                        Console.Write("Book ID : "+obj.books[i].id+" "+"Book Title: " +obj.books[i].title + " " +"Book Author "+ obj.books[i].author
+                                                    +" "+"Genre: "+ obj.books[i].genre+" "+
+                        "Publisher: "+obj.books[i].publisher+" "+"Publish Data: "+ obj.books[i].publish_date);*/
+
+
+
+
 
                     }
+                    Console.WriteLine(sb.ToString());
 
                 }
             }
