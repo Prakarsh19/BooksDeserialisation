@@ -24,6 +24,20 @@ namespace BooksDeserialisation
                 {
                     XmlSerializer serializer = new XmlSerializer(typeof(Catalog));
                     obj = (Catalog)serializer.Deserialize(reader);
+                    
+                    for(int i =0; i<obj.books.Count;i++ )
+                    {
+                        /*Console.WriteLine(obj.books[i].genre);*/
+                        Console.WriteLine(obj.books[i].author);
+                        Console.WriteLine(obj.books[i].title);
+                        Console.WriteLine(obj.books[i].genre);
+                        Console.WriteLine(obj.books[i].publisher);
+                        Console.WriteLine(obj.books[i].publish_date);
+                        Console.WriteLine(obj.books[i].description);
+                        Console.WriteLine(obj.books[i].registration_date);
+
+
+                    }
 
                 }
             }
@@ -34,7 +48,7 @@ namespace BooksDeserialisation
         static void Main(string[] args)
         {
             DeSerialiseData();
-            Console.WriteLine();
+            Console.ReadLine();
         }
     }
 }

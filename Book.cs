@@ -15,8 +15,9 @@ namespace BooksDeserialisation
         public string author { get; set; }
         [XmlElement(ElementName = "title")]
         public string title { get; set; }
+
         [XmlElement(ElementName = "genre")]
-        public string genre { get; set; }
+        public GenreType genre { get; set; }
         [XmlElement(ElementName = "publisher")]
         public string publisher { get; set; }
         [XmlElement(ElementName = "publish_date")]
